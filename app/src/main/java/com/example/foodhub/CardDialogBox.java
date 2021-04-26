@@ -36,6 +36,7 @@ public class CardDialogBox extends Dialog {
         rbCashOnDelivery = findViewById(R.id.rb_cash_on_delivery);
         rbCard = findViewById(R.id.rb_card);
         rbCashOnDelivery.setChecked(true);
+        visibility(false);
         rbCashOnDelivery.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 visibility(false);

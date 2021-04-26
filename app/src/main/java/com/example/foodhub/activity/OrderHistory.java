@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
@@ -50,6 +51,7 @@ public class OrderHistory extends AppCompatActivity {
     private void initAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
+        Log.d("orderHistory", SessionData.I.localData.currentUser.getOrderHistory().toString());
         OrderAdapter orderAdapter = new OrderAdapter(SessionData.I.localData.currentUser.getOrderHistory());
         recyclerView.setAdapter(orderAdapter);
     }

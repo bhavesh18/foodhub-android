@@ -27,12 +27,14 @@ public class OrderAdapter extends RecyclerViewBase {
 
     @Override
     protected void updateView(int position) {
-        FoodData data = orderList.get(position);
-        iv_item.setImageResource(data.getImg());
-        tv_item_name.setText(data.getName());
-        tv_qty.setText("Qty: " + data.getQuantity());
-        tv_price.setText("Price: $" + data.getPrice());
-        tv_date.setText("Date: " + data.getDate());
+
+            FoodData data = orderList.get(position);
+            iv_item.setImageResource(data.getImg());
+            tv_item_name.setText(data.getName());
+            tv_qty.setText("Qty: " + data.getQuantity());
+            tv_price.setText("Price: $" + data.getPrice());
+            tv_date.setText("Date: " + data.getDate());
+
     }
 
     @Override
