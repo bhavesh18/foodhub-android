@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_restaurant_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wall1" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_restaurant_image"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/restaurant_name"
+                android:textColor="#2B2B2B"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/iv_dish"-->
+            <!--                android:layout_width="18dp"-->
+            <!--                android:layout_height="18dp"-->
+            <!--                android:layout_below="@id/tv_restaurant_name"-->
+            <!--                android:layout_marginStart="20dp"-->
+            <!--                android:layout_marginLeft="20dp"-->
+            <!--                android:layout_marginTop="4dp"-->
+            <!--                android:backgroundTint="@color/black"-->
+            <!--                android:src="@drawable/dish" />-->
+
+            <TextView
+                android:id="@+id/tv_dish_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_restaurant_name"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/indian"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <!--            android:layout_toEndOf="@+id/iv_dish"-->
+            <!--            android:layout_toRightOf="@+id/iv_dish"-->
+            <ImageView
+                android:id="@+id/iv_star"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/tv_restaurant_name"
+                android:layout_toStartOf="@+id/tv_rating"
+                android:layout_toLeftOf="@+id/tv_rating"
+                android:src="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_restaurant_name"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="4.8"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
