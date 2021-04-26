@@ -15,6 +15,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.Toolbar
@@ -26,40 +28,41 @@
 
             <ImageView
                 android:id="@+id/iv_profile"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_profile" />
 
 
             <ImageView
                 android:layout_width="150dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/logo" />
 
             <ImageView
                 android:id="@+id/iv_order_history"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_toLeftOf="@+id/iv_cart"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
+                android:paddingRight="10dp"
                 android:src="@drawable/ic_order_history"
                 android:layout_toStartOf="@+id/iv_cart"
                 android:layout_marginEnd="5dp" />
 
             <ImageView
                 android:id="@+id/iv_cart"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
                 android:src="@drawable/ic_cart_white"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="20dp" />
+                 />
 
             <TextView
                 android:id="@+id/tv_cart_notification"

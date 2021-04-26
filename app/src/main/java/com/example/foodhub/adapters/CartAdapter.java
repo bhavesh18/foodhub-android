@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.example.foodhub.R;
 import com.example.foodhub.RecyclerViewBase;
+import com.example.foodhub.SessionData;
 import com.example.foodhub.model.FoodData;
 
 import java.util.ArrayList;
@@ -31,6 +32,17 @@ public class CartAdapter extends RecyclerViewBase {
         tv_item_name.setText(data.getName());
         tv_price.setText("Price: $" + data.getPrice());
         tv_qty.setText("Qty: " + data.getQuantity());
+
+        iv_delete.setOnClickListener(view->{
+            for (int i = 0; i < SessionData.I.localData.cartList.size(); i++) {
+                if (SessionData.I.localData.cartList.get(i).getName().equals(data.getName())){
+                    SessionData.I.localData.cartList.remove(i);
+                    SessionData.I.saveLocalData();
+                    notifyDataSetChanged();
+                    break;
+                }
+            }
+        });
 
     }
 

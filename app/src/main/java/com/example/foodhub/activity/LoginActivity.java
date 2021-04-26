@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             if (SessionData.I.localData.userList.size() != 0) {
                 for (int i = 0; i < SessionData.I.localData.userList.size(); i++) {
 
-                    if (etEmail.getText().toString().trim().equals(SessionData.I.localData.userList.get(i).getEmail())
+                    if (etEmail.getText().toString().trim().equalsIgnoreCase(SessionData.I.localData.userList.get(i).getEmail())
                             && etPassword.getText().toString().trim().equals(SessionData.I.localData.userList.get(i).getPassword())) {
                         SessionData.I.localData.currentUser = SessionData.I.localData.userList.get(i);
                         SessionData.I.setLogin(true);
@@ -63,15 +63,17 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         });
+
         tvSignUp.setOnClickListener(view -> {
             SessionData.I.goTo(this, SignUpActivity.class);
         });
+
         tvForgotPassword.setOnClickListener(view -> {
             if (etEmail.getText().toString().trim().isEmpty()) {
                 Toast.makeText(this, "Please write your email", Toast.LENGTH_SHORT).show();
             } else {
                 for (int i = 0; i < SessionData.I.localData.userList.size(); i++) {
-                    if (etEmail.getText().toString().trim().equals(SessionData.I.localData.userList.get(i).getEmail())) {
+                    if (etEmail.getText().toString().trim().equalsIgnoreCase(SessionData.I.localData.userList.get(i).getEmail())) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(this);
                         builder.setTitle("Your password is:");
                         builder.setMessage(SessionData.I.localData.userList.get(i).getPassword());

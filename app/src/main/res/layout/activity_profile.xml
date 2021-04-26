@@ -65,21 +65,12 @@
         android:inputType="phone"
         android:textColor="@color/black" />
 
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_below="@+id/et_phone"
-        android:layout_marginTop="10dp"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textColor="@color/black" />
-
     <Button
         android:id="@+id/btn_update"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_below="@id/et_password"
+        android:textColor="@color/white"
+        android:layout_below="@id/et_phone"
         android:backgroundTint="@color/orange"
         android:text="@string/update" />
 
@@ -87,9 +78,9 @@
         android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:textColor="@color/white"
         android:layout_alignParentBottom="true"
         android:backgroundTint="@color/red"
         android:text="@string/logout" />
-
 
 </RelativeLayout>

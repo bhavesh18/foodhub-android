@@ -181,6 +181,7 @@
         android:id="@+id/btn_add_to_cart"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:textColor="@color/white"
         android:layout_alignParentBottom="true"
         android:background="@color/orange"
         android:text="@string/add_to_cart" />

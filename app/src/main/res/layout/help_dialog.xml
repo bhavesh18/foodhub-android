@@ -23,7 +23,7 @@
         android:layout_below="@id/tv_feel_free"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/black"
+        android:textColor="@color/link"
         android:text="@string/_631_3855_444" />
 
     <TextView
@@ -32,8 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_phone"
         android:textSize="20sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="10dp"
+        android:textColor="@color/link"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:text="@string/food_hub_com" />

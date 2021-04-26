@@ -39,12 +39,12 @@ public class FoodListActivity extends AppCompatActivity {
     }
 
     private void initViewsWithData() {
-        setSupportActionBar(toolBar);
-        getSupportActionBar().setTitle("Food List");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        initAdapter();
         Bundle bundle = getIntent().getExtras();
         String restaurantName = bundle.getString("restaurantName");
+        setSupportActionBar(toolBar);
+        getSupportActionBar().setTitle(restaurantName);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        initAdapter();
         setList(restaurantName);
     }
 
