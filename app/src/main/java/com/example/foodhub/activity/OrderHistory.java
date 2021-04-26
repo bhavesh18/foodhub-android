@@ -16,6 +16,7 @@ import com.example.foodhub.HelpDialogBox;
 import com.example.foodhub.R;
 import com.example.foodhub.SessionData;
 import com.example.foodhub.adapters.OrderAdapter;
+import com.example.foodhub.model.FoodData;
 
 public class OrderHistory extends AppCompatActivity {
     private RecyclerView recyclerView;
